@@ -2,34 +2,34 @@ import { Card } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section id="about" className="py-24 md:py-32 bg-gradient-subtle">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16 md:mb-20 space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
               About Me
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
           </div>
 
-          <Card className="p-8 md:p-12 shadow-card animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                Mr. Praveenkumar Lade is a respected educational leader and political figure in Dhule. 
-                As the Principal of <span className="font-semibold text-secondary">Chhatrapati Shivaji High School & Junior College</span>, 
-                he is committed to academic excellence and nurturing the next generation of leaders.
+          <Card className="p-10 md:p-14 lg:p-16 shadow-card border-border/50 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+            <div className="space-y-8 text-foreground/80">
+              <p className="text-lg md:text-xl leading-relaxed">
+                Mr. Praveenkumar Lade is a distinguished educational leader in Dhule, serving as the 
+                <span className="font-semibold text-foreground"> Principal of Chhatrapati Shivaji High School & Junior College</span>. 
+                His commitment to academic excellence and holistic education has shaped countless students' futures.
               </p>
               
-              <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                In his role as <span className="font-semibold text-primary">President of the BJP Teachers' Front</span> in 
-                Dhule Metropolitan, he actively supports teachers and advocates for progressive education policies 
-                that benefit both educators and students.
+              <p className="text-lg md:text-xl leading-relaxed">
+                As the <span className="font-semibold text-foreground">President of the Bharatiya Janata Party (BJP) Teachers' Front</span> in 
+                Dhule Metropolitan, he champions the rights and welfare of educators, advocating for progressive 
+                education policies that empower both teachers and students across the region.
               </p>
               
-              <p className="text-lg text-foreground/90 leading-relaxed">
-                He is also a dedicated <span className="font-semibold text-accent">BJP candidate</span> working tirelessly 
-                to serve his community through political leadership and business initiatives that promote economic 
-                growth and social development in the region.
+              <p className="text-lg md:text-xl leading-relaxed">
+                Through his dual roles in education and political leadership, Mr. Lade works tirelessly to 
+                create lasting positive change in the community, fostering an environment where quality education 
+                and teacher empowerment go hand in hand.
               </p>
             </div>
           </Card>

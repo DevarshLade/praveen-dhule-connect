@@ -59,69 +59,69 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 md:py-32 bg-gradient-subtle">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-16 md:mb-20 space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
               Get in Touch
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-4" />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              For inquiries related to education, political campaign, or business collaborations
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto pt-2">
+              For inquiries related to education, political initiatives, or collaborations
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="space-y-6 animate-in fade-in slide-in-from-left-4 duration-700 delay-150">
-              <Card className="p-6 hover:shadow-card transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
+          <div className="grid lg:grid-cols-3 gap-8 md:gap-10">
+            <div className="space-y-6 animate-in fade-in slide-in-from-left-4 duration-700 delay-100">
+              <Card className="p-8 hover:shadow-card transition-all duration-300 border-border/50">
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-sm text-muted-foreground">Contact via email</p>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">Email</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Contact via email</p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 hover:shadow-card transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-secondary/80 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
+              <Card className="p-8 hover:shadow-card transition-all duration-300 border-border/50">
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                    <p className="text-sm text-muted-foreground">Call for inquiries</p>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">Phone</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Call for inquiries</p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 hover:shadow-card transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
+              <Card className="p-8 hover:shadow-card transition-all duration-300 border-border/50">
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                    <p className="text-sm text-muted-foreground">Dhule, Maharashtra</p>
+                    <h3 className="font-semibold text-foreground mb-1 text-lg">Location</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">Dhule, Maharashtra</p>
                   </div>
                 </div>
               </Card>
             </div>
 
-            <Card className="lg:col-span-2 p-8 shadow-card animate-in fade-in slide-in-from-right-4 duration-700 delay-150">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <Card className="lg:col-span-2 p-10 md:p-12 shadow-card border-border/50 animate-in fade-in slide-in-from-right-4 duration-700 delay-100">
+              <form onSubmit={handleSubmit} className="space-y-7">
                 <div>
                   <Input
                     name="name"
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={errors.name ? "border-destructive" : ""}
+                    className={`h-12 ${errors.name ? "border-destructive" : ""}`}
                   />
-                  {errors.name && <p className="text-sm text-destructive mt-1">{errors.name}</p>}
+                  {errors.name && <p className="text-sm text-destructive mt-2">{errors.name}</p>}
                 </div>
 
                 <div>
@@ -131,9 +131,9 @@ const Contact = () => {
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={errors.email ? "border-destructive" : ""}
+                    className={`h-12 ${errors.email ? "border-destructive" : ""}`}
                   />
-                  {errors.email && <p className="text-sm text-destructive mt-1">{errors.email}</p>}
+                  {errors.email && <p className="text-sm text-destructive mt-2">{errors.email}</p>}
                 </div>
 
                 <div>
@@ -142,9 +142,9 @@ const Contact = () => {
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={errors.subject ? "border-destructive" : ""}
+                    className={`h-12 ${errors.subject ? "border-destructive" : ""}`}
                   />
-                  {errors.subject && <p className="text-sm text-destructive mt-1">{errors.subject}</p>}
+                  {errors.subject && <p className="text-sm text-destructive mt-2">{errors.subject}</p>}
                 </div>
 
                 <div>
@@ -156,13 +156,13 @@ const Contact = () => {
                     onChange={handleChange}
                     className={errors.message ? "border-destructive" : ""}
                   />
-                  {errors.message && <p className="text-sm text-destructive mt-1">{errors.message}</p>}
+                  {errors.message && <p className="text-sm text-destructive mt-2">{errors.message}</p>}
                 </div>
 
                 <Button 
                   type="submit" 
                   size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 text-white shadow-elegant transition-all hover:scale-105"
+                  className="w-full h-12 bg-primary hover:bg-primary/90 text-white shadow-lg transition-all hover:shadow-xl hover:scale-[1.02]"
                 >
                   Send Message
                 </Button>
